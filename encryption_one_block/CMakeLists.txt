@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(project_magma)
+include_directories(support_functions/include)
+add_subdirectory(support_functions)
+add_executable(encryption_one_block encryption_one_block.cpp)
+target_link_libraries(encryption_one_block PUBLIC support_functions)
