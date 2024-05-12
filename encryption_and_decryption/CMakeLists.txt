@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(project_magma)
+include_directories(support_functions/include)
+add_subdirectory(support_functions)
+add_executable(main main.cpp)
+target_link_libraries(main PUBLIC support_functions)
