@@ -17,8 +17,11 @@ uint64_t encryption_one_block(const uint64_t& original_block, const std::vector<
 
 int main() {
 	std::vector<uint32_t> keys = key_gen("C:\\C\\project_magma\\encryption_one_block\\keys\\key.txt");
-	uint64_t one_block{0xfedcba9876543210};
+	uint64_t one_block{0x654F8B329E71C0D5};
 	one_block = encryption_one_block(one_block, keys);
-	std::cout << "Final answer: " << std::hex << one_block << std::endl;
+	std::cout << "Encrypted block: " << std::hex << one_block << std::endl;
+	std::vector<uint32_t> keys_reversed;
+	std::copy(keys.rbegin(), keys.rend(), std::back_inserter(keys_reversed));
+	std::cout << "Decrypted block: " << std::hex << encryption_one_block(one_block, keys_reversed) << std::endl;
 	return 0;
 }
