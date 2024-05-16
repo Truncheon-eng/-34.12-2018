@@ -30,15 +30,22 @@ bool key_is_valid(const std::string& PATH_TO_KEY_FILE) {
 	return valid;
 }
 
-bool path_to_file_is_valid(const std::string& PATH) { // проверка открывается ли файл или нет
+bool path_to_input_file_is_valid(const std::string& PATH) { // проверка открывается ли файл или нет
 	std::ifstream file{PATH};
 	bool status = file.is_open();
 	file.close();
 	return status;
 }
 
+bool path_to_output_file_is_valid(const std::string& PATH) {
+	std::ofstream file{PATH, std::ios::app};
+	bool status = file.is_open();
+	file.close();
+	return status;
+}
 
-void repeated_action(bool (*function)(const std::string& parameter), std::string& changing_value, std::string printing_message) { // функция, которая не позволит выполняться дальнейшему коду, пока не будут введены корректные пути файлов
+
+void repeat_while(bool (*function)(const std::string& parameter), std::string& changing_value, std::string printing_message) { // функция, которая не позволит выполняться дальнейшему коду, пока не будут введены корректные пути файлов
 	bool flag{0};
 	while(!flag) {
 		std::cout << printing_message << std::endl;

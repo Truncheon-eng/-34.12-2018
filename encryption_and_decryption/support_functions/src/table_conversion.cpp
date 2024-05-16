@@ -1,6 +1,3 @@
-#include <iostream>
-#include <vector>
-#include <cstdint>
 #include "support_functions.h"
 
 std::vector<std::vector<uint32_t>> conversion_table{
