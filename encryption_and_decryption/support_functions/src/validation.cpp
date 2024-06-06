@@ -10,15 +10,15 @@ bool key_is_valid(const std::string& PATH_TO_KEY_FILE) {
 		std::getline(key_file, key);
 		if(key.size() == 0) {
 			valid = 0;
-			std::cout << "Enter the key!" << std::endl;
+			// std::cout << "Enter the key!" << std::endl;
 		} else if(key.size() > 64) {
 			valid = 0;
-			std::cout << "The length of key must be less or equal 64!" << std::endl;
+			// std::cout << "The length of key must be less or equal 64!" << std::endl;
 		} else {
 			for(int i{0}; i < key.size(); i++) {
 				if(possible_symbols_in_keys.find(key[i]) == possible_symbols_in_keys.end()) {
 					valid = 0;
-					std::cout << "The key characters must match the 16 number system!" << std::endl;
+					// std::cout << "The key characters must match the 16 number system!" << std::endl;
 					break;
 				}
 			}
@@ -41,15 +41,14 @@ bool path_to_output_file_is_valid(const std::string& PATH) {
 	std::ofstream file{PATH, std::ios::app};
 	bool status = file.is_open();
 	file.close();
+	std::remove(PATH.c_str()); // c_str - возвращает указатель на const* char[], который и принимает std::remove
 	return status;
 }
-
-
-void repeat_while(bool (*function)(const std::string& parameter), std::string& changing_value, std::string printing_message) { // функция, которая не позволит выполняться дальнейшему коду, пока не будут введены корректные пути файлов
-	bool flag{0};
-	while(!flag) {
-		std::cout << printing_message << std::endl;
-		std::cin >> changing_value;
-		flag = function(changing_value);
-	}
-}
+// void repeat_while(bool (*function)(const std::string& parameter), std::string& changing_value, std::string printing_message) { // функция, которая не позволит выполняться дальнейшему коду, пока не будут введены корректные пути файлов
+// 	bool flag{0};
+// 	while(!flag) {
+// 		// std::cout << printing_message << std::endl;
+// 		// std::cin >> changing_value;
+// 		flag = function(changing_value);
+// 	}
+// }
