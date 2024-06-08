@@ -14,6 +14,7 @@ private:
 
 	void OnHelpButtonClicked(wxCommandEvent& evt);
 	void OnButtonClicked(wxCommandEvent& evt);
+	void OnSourceButtonClicked(wxCommandEvent& evt);
 };
 
 #endif
