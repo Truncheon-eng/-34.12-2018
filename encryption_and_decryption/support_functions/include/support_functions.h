@@ -21,7 +21,7 @@ bool path_to_output_file_is_valid(const std::string& PATH);
 void repeat_while(bool (*function)(const std::string& parameter), std::string& changing_value, std::string printing_message);
 std::pair<std::vector<uint64_t>, std::vector<char>> get_data(const std::string& PATH_TO_FILE);
 std::vector<uint64_t> decrypt_or_encrypt(const std::string& PATH_TO_KEY_FILE, const bool& mode, std::vector<uint64_t>&& vector_of_blocks);
-void write_to_file(const std::string& PATH_TO_OUTPUT_FILE, std::vector<uint64_t>&& encrypted_or_decrypted_blocks, 
+void write_to_file(const std::string& PATH_TO_OUTPUT_FILE, const std::vector<uint64_t>& encrypted_or_decrypted_blocks, 
 	const std::vector<char>& additional_information);
 
 #endif

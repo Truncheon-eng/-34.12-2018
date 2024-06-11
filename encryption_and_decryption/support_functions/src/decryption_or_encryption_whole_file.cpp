@@ -29,7 +29,7 @@ std::vector<uint64_t> decrypt_or_encrypt(const std::string& PATH_TO_KEY_FILE, co
 	return encrypted_or_decrypted_blocks;
 }
 
-void write_to_file(const std::string& PATH_TO_OUTPUT_FILE, std::vector<uint64_t>&& encrypted_or_decrypted_blocks, 
+void write_to_file(const std::string& PATH_TO_OUTPUT_FILE, const std::vector<uint64_t>& encrypted_or_decrypted_blocks, 
 	const std::vector<char>& additional_information) {
 	std::ofstream ofile{PATH_TO_OUTPUT_FILE, std::ios::binary}; // начало записи в файл по пути PATH_TO_OUTPUT_FILE
 	ofile.write(reinterpret_cast<const char*>(encrypted_or_decrypted_blocks.data()), encrypted_or_decrypted_blocks.size() * sizeof(uint64_t));
