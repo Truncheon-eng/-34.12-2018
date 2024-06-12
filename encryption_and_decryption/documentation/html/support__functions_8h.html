@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GOST-34.12-2018: Файл support_functions/include/support_functions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">GOST-34.12-2018
+   </div>
+   <div id="projectbrief">В этом проекте реализован шифр ГОСТ-34.12-2018 под названием &quot;Магма&quot;</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7a0ae24931cc9720f9bf7b458969cad4.html">support_functions</a></li><li class="navelem"><a class="el" href="dir_cd962b7ebd77578f5fb4b55438b2d6ce.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл support_functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Содержит функции, необходимые для расшифрования и зашифрования.  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+</div>
+<p><a href="support__functions_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a6ad75b77db679397ec9822aa385bd012" id="r_a6ad75b77db679397ec9822aa385bd012"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ad75b77db679397ec9822aa385bd012">applyConversionTable</a> (const uint32_t &amp;num)</td></tr>
+<tr class="memdesc:a6ad75b77db679397ec9822aa385bd012"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, которая реализует T-преобразование блока длиной 32 бита(T-преобразование - такое преобразование, которое делит исходный 32-ух битный блок на блоки по 4 бита и меняет их в соответсвии с conversion_table).  <br /></td></tr>
+<tr class="separator:a6ad75b77db679397ec9822aa385bd012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f0c3c61184fc7d4c09cfcb5bec0d33" id="r_ad9f0c3c61184fc7d4c09cfcb5bec0d33"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9f0c3c61184fc7d4c09cfcb5bec0d33">G_conversion</a> (const uint32_t &amp;first_half_bits, const uint32_t &amp;second_half_bits, const uint32_t &amp;current_key)</td></tr>
+<tr class="memdesc:ad9f0c3c61184fc7d4c09cfcb5bec0d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, реализующая G-преобразование блока длиной 32 бита(G-преобразование - преобразование, описанное в ГОСТ 34.12-2018 и меняющее второй полублок исходного блока длиной 64 бита).  <br /></td></tr>
+<tr class="separator:ad9f0c3c61184fc7d4c09cfcb5bec0d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5945daf74ba3e05b11adb42ffbdb858c" id="r_a5945daf74ba3e05b11adb42ffbdb858c"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5945daf74ba3e05b11adb42ffbdb858c">encryption_one_block</a> (const uint64_t &amp;original_block, const std::vector&lt; uint32_t &gt; &amp;generated_keys)</td></tr>
+<tr class="memdesc:a5945daf74ba3e05b11adb42ffbdb858c"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, зашифровывающая или расшифровывающая блок длиной 64 бита.  <br /></td></tr>
+<tr class="separator:a5945daf74ba3e05b11adb42ffbdb858c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79c8a782d07cabbb7997bbe3824538cd" id="r_a79c8a782d07cabbb7997bbe3824538cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79c8a782d07cabbb7997bbe3824538cd">key_is_valid</a> (const std::string &amp;PATH_TO_KEY_FILE)</td></tr>
+<tr class="memdesc:a79c8a782d07cabbb7997bbe3824538cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция-валидатор, определяющая существование файла по переданному пути и корректность содержащегося в нём ключа.  <br /></td></tr>
+<tr class="separator:a79c8a782d07cabbb7997bbe3824538cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1bbe57f83b6e65018d4b03f96c6f63" id="r_a8b1bbe57f83b6e65018d4b03f96c6f63"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b1bbe57f83b6e65018d4b03f96c6f63">path_to_input_file_is_valid</a> (const std::string &amp;PATH)</td></tr>
+<tr class="memdesc:a8b1bbe57f83b6e65018d4b03f96c6f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">данная функция создает поток ввода и определяет, возможно ли считывание данных из файла по указанному пути.  <br /></td></tr>
+<tr class="separator:a8b1bbe57f83b6e65018d4b03f96c6f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5370d202e584e936b2ec0ab99082f0" id="r_aec5370d202e584e936b2ec0ab99082f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec5370d202e584e936b2ec0ab99082f0">path_to_output_file_is_valid</a> (const std::string &amp;PATH)</td></tr>
+<tr class="memdesc:aec5370d202e584e936b2ec0ab99082f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">данная функция создает поток вывода и определяет возможность создания файла по указанному пути.  <br /></td></tr>
+<tr class="separator:aec5370d202e584e936b2ec0ab99082f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d1e909f735daf9a70a4ab50acbd78e" id="r_a01d1e909f735daf9a70a4ab50acbd78e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint32_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01d1e909f735daf9a70a4ab50acbd78e">key_gen</a> (const std::string &amp;PATH_TO_KEY_FILE, const bool &amp;mode)</td></tr>
+<tr class="memdesc:a01d1e909f735daf9a70a4ab50acbd78e"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, создающая массив 32-битных ключей, соответствующих конкретной итерации алгоритма зашифрования или расшифрования.  <br /></td></tr>
+<tr class="separator:a01d1e909f735daf9a70a4ab50acbd78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf26a8ce0529c5d1809ea7e82ae727c4" id="r_aaf26a8ce0529c5d1809ea7e82ae727c4"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::vector&lt; uint64_t &gt;, std::vector&lt; char &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf26a8ce0529c5d1809ea7e82ae727c4">get_data</a> (const std::string &amp;PATH_TO_FILE)</td></tr>
+<tr class="memdesc:aaf26a8ce0529c5d1809ea7e82ae727c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, представляющая исходный файл в виде вектора, состоящего из блоков длиною 64 бита, а также вектора типа char, представляющего собой остаток, который не сумел вместиться в 64-х битный блок.  <br /></td></tr>
+<tr class="separator:aaf26a8ce0529c5d1809ea7e82ae727c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700a073af5afd9fb218df5ce6bd2f5d1" id="r_a700a073af5afd9fb218df5ce6bd2f5d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a700a073af5afd9fb218df5ce6bd2f5d1">write_to_file</a> (const std::string &amp;PATH_TO_OUTPUT_FILE, const std::vector&lt; uint64_t &gt; &amp;encrypted_or_decrypted_blocks, const std::vector&lt; char &gt; &amp;additional_information)</td></tr>
+<tr class="memdesc:a700a073af5afd9fb218df5ce6bd2f5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, записывающая зашифрованный или расшифрованные данные в файл.  <br /></td></tr>
+<tr class="separator:a700a073af5afd9fb218df5ce6bd2f5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9701579d08fb910bd48fa3f4e0341f1" id="r_ab9701579d08fb910bd48fa3f4e0341f1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; uint64_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9701579d08fb910bd48fa3f4e0341f1">decrypt_or_encrypt</a> (const std::string &amp;PATH_TO_KEY_FILE, const bool &amp;mode, std::vector&lt; uint64_t &gt; &amp;&amp;vector_of_blocks)</td></tr>
+<tr class="memdesc:ab9701579d08fb910bd48fa3f4e0341f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, зашифровывающая или расшифровывающая блоки длиной 64 бита.  <br /></td></tr>
+<tr class="separator:ab9701579d08fb910bd48fa3f4e0341f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Содержит функции, необходимые для расшифрования и зашифрования. </p>
+</div><h2 class="groupheader">Функции</h2>
+<a id="a6ad75b77db679397ec9822aa385bd012" name="a6ad75b77db679397ec9822aa385bd012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad75b77db679397ec9822aa385bd012">&#9670;&#160;</a></span>applyConversionTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t applyConversionTable </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t &amp;</td>          <td class="paramname"><span class="paramname"><em>num</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, которая реализует T-преобразование блока длиной 32 бита(T-преобразование - такое преобразование, которое делит исходный 32-ух битный блок на блоки по 4 бита и меняет их в соответсвии с conversion_table). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num</td><td>блок длиной 32 бита, над которым производится T преобразование. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab9701579d08fb910bd48fa3f4e0341f1" name="ab9701579d08fb910bd48fa3f4e0341f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9701579d08fb910bd48fa3f4e0341f1">&#9670;&#160;</a></span>decrypt_or_encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint64_t &gt; decrypt_or_encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>PATH_TO_KEY_FILE</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>mode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; uint64_t &gt; &amp;&amp;</td>          <td class="paramname"><span class="paramname"><em>vector_of_blocks</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, зашифровывающая или расшифровывающая блоки длиной 64 бита. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PATH_TO_KEY_FILE</td><td>путь к файлу с ключом.</td></tr>
+    <tr><td class="paramname">mode</td><td>мод("Зашифрование", "Расшифрование").</td></tr>
+    <tr><td class="paramname">vector_of_blocks</td><td>rvalue-ссылка на вектор 64-х битных блоков.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>вектор 64-х битных зашифрованных или расшифрованных блоков. </dd></dl>
+
+</div>
+</div>
+<a id="a5945daf74ba3e05b11adb42ffbdb858c" name="a5945daf74ba3e05b11adb42ffbdb858c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5945daf74ba3e05b11adb42ffbdb858c">&#9670;&#160;</a></span>encryption_one_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t encryption_one_block </td>
+          <td>(</td>
+          <td class="paramtype">const uint64_t &amp;</td>          <td class="paramname"><span class="paramname"><em>original_block</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; uint32_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>generated_keys</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, зашифровывающая или расшифровывающая блок длиной 64 бита. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">original_block</td><td>блок длиной 64 бита, который расшифровывается или зашифровывается.</td></tr>
+    <tr><td class="paramname">generated_keys</td><td>вектор, состоящий из ключей, соответствующих каждой итерации алгоритма шифра.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>зашифрованный или расшифрованный 64-х битный блок. </dd></dl>
+
+</div>
+</div>
+<a id="ad9f0c3c61184fc7d4c09cfcb5bec0d33" name="ad9f0c3c61184fc7d4c09cfcb5bec0d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f0c3c61184fc7d4c09cfcb5bec0d33">&#9670;&#160;</a></span>G_conversion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t G_conversion </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t &amp;</td>          <td class="paramname"><span class="paramname"><em>first_half_bits</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t &amp;</td>          <td class="paramname"><span class="paramname"><em>second_half_bits</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t &amp;</td>          <td class="paramname"><span class="paramname"><em>current_key</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, реализующая G-преобразование блока длиной 32 бита(G-преобразование - преобразование, описанное в ГОСТ 34.12-2018 и меняющее второй полублок исходного блока длиной 64 бита). </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first_half_bits</td><td>первые 32 бита, необходимые при G-преобразовании.</td></tr>
+    <tr><td class="paramname">second_half_bits</td><td>воторые 32 бита, над которыми и производится данное G-преобразование.</td></tr>
+    <tr><td class="paramname">current_key</td><td>ключ, соотвествующий определённой итерации шифра.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>return значение получаемое в результате G-преобразования. </p>
+
+</div>
+</div>
+<a id="aaf26a8ce0529c5d1809ea7e82ae727c4" name="aaf26a8ce0529c5d1809ea7e82ae727c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf26a8ce0529c5d1809ea7e82ae727c4">&#9670;&#160;</a></span>get_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; std::vector&lt; uint64_t &gt;, std::vector&lt; char &gt; &gt; get_data </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>PATH_TO_FILE</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, представляющая исходный файл в виде вектора, состоящего из блоков длиною 64 бита, а также вектора типа char, представляющего собой остаток, который не сумел вместиться в 64-х битный блок. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PATH_TO_FILE</td><td>путь к исходному файлу.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>пара векторов типа uint64_t и char. </dd></dl>
+
+</div>
+</div>
+<a id="a01d1e909f735daf9a70a4ab50acbd78e" name="a01d1e909f735daf9a70a4ab50acbd78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01d1e909f735daf9a70a4ab50acbd78e">&#9670;&#160;</a></span>key_gen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; uint32_t &gt; key_gen </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>PATH_TO_KEY_FILE</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool &amp;</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, создающая массив 32-битных ключей, соответствующих конкретной итерации алгоритма зашифрования или расшифрования. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PATH_TO_KEY_FILE</td><td>путь к файлу, содержащему ключ.</td></tr>
+    <tr><td class="paramname">mode</td><td>параметр, определяющий для какого из модов необходимо создавать ключи(моды - "Зашифрование", "Расшифрование").</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>вектор, длиной 32, и состоящий из ключей длиной 32 бита. </dd></dl>
+
+</div>
+</div>
+<a id="a79c8a782d07cabbb7997bbe3824538cd" name="a79c8a782d07cabbb7997bbe3824538cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c8a782d07cabbb7997bbe3824538cd">&#9670;&#160;</a></span>key_is_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool key_is_valid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>PATH_TO_KEY_FILE</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция-валидатор, определяющая существование файла по переданному пути и корректность содержащегося в нём ключа. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PATH_TO_KEY_FILE</td><td>абсолютный путь к файлу с ключом.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - если файл действительно существует и ключ, содержащийся в нём, валиден, false - в противном случае. </dd></dl>
+
+</div>
+</div>
+<a id="a8b1bbe57f83b6e65018d4b03f96c6f63" name="a8b1bbe57f83b6e65018d4b03f96c6f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1bbe57f83b6e65018d4b03f96c6f63">&#9670;&#160;</a></span>path_to_input_file_is_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool path_to_input_file_is_valid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>PATH</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>данная функция создает поток ввода и определяет, возможно ли считывание данных из файла по указанному пути. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PATH</td><td>путь к зашифровываемому или расшифровываемому файлу.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true возвращается тогда, когда открыть файл по пути получилось и считывание возможно, false - в противном случае. </dd></dl>
+
+</div>
+</div>
+<a id="aec5370d202e584e936b2ec0ab99082f0" name="aec5370d202e584e936b2ec0ab99082f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5370d202e584e936b2ec0ab99082f0">&#9670;&#160;</a></span>path_to_output_file_is_valid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool path_to_output_file_is_valid </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>PATH</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>данная функция создает поток вывода и определяет возможность создания файла по указанному пути. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PATH</td><td>путь к файлу "вывода".</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - если создать файл по пути можно, false - в противном случае. </dd></dl>
+
+</div>
+</div>
+<a id="a700a073af5afd9fb218df5ce6bd2f5d1" name="a700a073af5afd9fb218df5ce6bd2f5d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a700a073af5afd9fb218df5ce6bd2f5d1">&#9670;&#160;</a></span>write_to_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void write_to_file </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>PATH_TO_OUTPUT_FILE</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; uint64_t &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>encrypted_or_decrypted_blocks</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; char &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>additional_information</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, записывающая зашифрованный или расшифрованные данные в файл. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PATH_TO_OUTPUT_FILE</td><td>путь к выходному файлу.</td></tr>
+    <tr><td class="paramname">encrypted_or_decrypted_blocks</td><td>блоки длиной 64 бита.</td></tr>
+    <tr><td class="paramname">additional_information</td><td>байты, не сумевшие вместиться в 64-х битные блоки. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

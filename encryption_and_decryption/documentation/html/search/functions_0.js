@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainframe_0',['MainFrame',['../class_main_frame.html#a00c85521dad6b24000967206bcc53688',1,'MainFrame']]]
+  ['applyconversiontable_0',['applyConversionTable',['../support__functions_8h.html#a6ad75b77db679397ec9822aa385bd012',1,'support_functions.h']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oninit_0',['OnInit',['../class_app.html#a9a5965d3080ea989a76059af0a9313b3',1,'App']]]
+  ['decrypt_5for_5fencrypt_0',['decrypt_or_encrypt',['../support__functions_8h.html#ab9701579d08fb910bd48fa3f4e0341f1',1,'support_functions.h']]]
 ];

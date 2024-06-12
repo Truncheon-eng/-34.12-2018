@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainframe_0',['MainFrame',['../class_main_frame.html',1,'MainFrame'],['../class_main_frame.html#a00c85521dad6b24000967206bcc53688',1,'MainFrame::MainFrame()']]]
+  ['decrypt_5for_5fencrypt_0',['decrypt_or_encrypt',['../support__functions_8h.html#ab9701579d08fb910bd48fa3f4e0341f1',1,'support_functions.h']]]
 ];
