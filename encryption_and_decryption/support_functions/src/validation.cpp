@@ -44,11 +44,3 @@ bool path_to_output_file_is_valid(const std::string& PATH) {
 	std::remove(PATH.c_str()); // c_str - возвращает указатель на const* char[], который и принимает std::remove
 	return status;
 }
-// void repeat_while(bool (*function)(const std::string& parameter), std::string& changing_value, std::string printing_message) { // функция, которая не позволит выполняться дальнейшему коду, пока не будут введены корректные пути файлов
-// 	bool flag{0};
-// 	while(!flag) {
-// 		// std::cout << printing_message << std::endl;
-// 		// std::cin >> changing_value;
-// 		flag = function(changing_value);
-// 	}
-// }

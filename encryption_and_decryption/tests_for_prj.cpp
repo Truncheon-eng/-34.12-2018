@@ -75,6 +75,13 @@ TEST_CASE("Checking write_to_file function") {
 	std::remove(path_to_file.c_str());
 }
 
+TEST_CASE("Checking g_conversion function") {
+	REQUIRE(g_conversion(0, 1) == 0xbe5b20c2);
+	CHECK(g_conversion(0xfedcba98, 0x87654321) == 0xfdcbc20c);
+	CHECK(g_conversion(0x87654321, 0xfdcbc20c) == 0x7e791a4b);
+	CHECK(g_conversion(0xfdcbc20c, 0x7e791a4b) == 0xc76549ec);
+}
+
 TEST_CASE("Checking G_conversion function") {
 	REQUIRE(G_conversion(0, 1, 0) == 0xbe5b20c2);
 	CHECK(G_conversion(0xfedcba98, 0x76543210, 0xffeeddcc) == 0x28da3b14); // значения после G преобразования взяты с самого ГОСТ

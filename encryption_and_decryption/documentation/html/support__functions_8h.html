@@ -101,6 +101,9 @@ $(function() {
 <tr class="memitem:a6ad75b77db679397ec9822aa385bd012" id="r_a6ad75b77db679397ec9822aa385bd012"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ad75b77db679397ec9822aa385bd012">applyConversionTable</a> (const uint32_t &amp;num)</td></tr>
 <tr class="memdesc:a6ad75b77db679397ec9822aa385bd012"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, которая реализует T-преобразование блока длиной 32 бита(T-преобразование - такое преобразование, которое делит исходный 32-ух битный блок на блоки по 4 бита и меняет их в соответсвии с conversion_table).  <br /></td></tr>
 <tr class="separator:a6ad75b77db679397ec9822aa385bd012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8041c53d74a5baf2a0dadb83c86655fd" id="r_a8041c53d74a5baf2a0dadb83c86655fd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8041c53d74a5baf2a0dadb83c86655fd">g_conversion</a> (const uint32_t &amp;half_of_block, const uint32_t &amp;current_key)</td></tr>
+<tr class="memdesc:a8041c53d74a5baf2a0dadb83c86655fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, реализующая g-преобразование блока длиной 32 бита. Для этого преобразования необходим только ключ, соответствующий определённой итерации и сам блок, над которым будет происходить преобразование.  <br /></td></tr>
+<tr class="separator:a8041c53d74a5baf2a0dadb83c86655fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9f0c3c61184fc7d4c09cfcb5bec0d33" id="r_ad9f0c3c61184fc7d4c09cfcb5bec0d33"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9f0c3c61184fc7d4c09cfcb5bec0d33">G_conversion</a> (const uint32_t &amp;first_half_bits, const uint32_t &amp;second_half_bits, const uint32_t &amp;current_key)</td></tr>
 <tr class="memdesc:ad9f0c3c61184fc7d4c09cfcb5bec0d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, реализующая G-преобразование блока длиной 32 бита(G-преобразование - преобразование, описанное в ГОСТ 34.12-2018 и меняющее второй полублок исходного блока длиной 64 бита).  <br /></td></tr>
 <tr class="separator:ad9f0c3c61184fc7d4c09cfcb5bec0d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -259,6 +262,36 @@ $(function() {
   </dd>
 </dl>
 <p>return значение получаемое в результате G-преобразования. </p>
+
+</div>
+</div>
+<a id="a8041c53d74a5baf2a0dadb83c86655fd" name="a8041c53d74a5baf2a0dadb83c86655fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8041c53d74a5baf2a0dadb83c86655fd">&#9670;&#160;</a></span>g_conversion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t g_conversion </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t &amp;</td>          <td class="paramname"><span class="paramname"><em>half_of_block</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t &amp;</td>          <td class="paramname"><span class="paramname"><em>current_key</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, реализующая g-преобразование блока длиной 32 бита. Для этого преобразования необходим только ключ, соответствующий определённой итерации и сам блок, над которым будет происходить преобразование. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">half_of_block</td><td>32-ух битный блок, к которому применяется g-преобразование.</td></tr>
+    <tr><td class="paramname">current_key</td><td>ключ, зависящий от итерации. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

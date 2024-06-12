@@ -63,7 +63,7 @@ void MainFrame::OnButtonClicked(wxCommandEvent& evt) {
 		std::pair<std::vector<uint64_t>, std::vector<char>> data_vectors = get_data(path_to_input_file);
 		write_to_file(path_to_output_file, decrypt_or_encrypt(path_to_key_file, 
 			mode, std::move(data_vectors.first)), data_vectors.second);
-		wxMessageBox(wxString::Format(wxT("%s прошло успешно!"), choice->GetStringSelection()));
+		wxMessageBox(wxString::Format(wxT("%s прошло успешно!"), choice->GetStringSelection()), wxT("Уведомление"));
 	}
 }
 

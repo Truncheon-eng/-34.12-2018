@@ -33,6 +33,6 @@ void write_to_file(const std::string& PATH_TO_OUTPUT_FILE, const std::vector<uin
 	const std::vector<char>& additional_information) {
 	std::ofstream ofile{PATH_TO_OUTPUT_FILE, std::ios::binary}; // начало записи в файл по пути PATH_TO_OUTPUT_FILE
 	ofile.write(reinterpret_cast<const char*>(encrypted_or_decrypted_blocks.data()), encrypted_or_decrypted_blocks.size() * sizeof(uint64_t));
-	ofile.write(reinterpret_cast<const char*>(additional_information.data()), additional_information.size() * sizeof(char));
+	ofile.write(additional_information.data(), additional_information.size() * sizeof(char));
 	ofile.close();
 }
