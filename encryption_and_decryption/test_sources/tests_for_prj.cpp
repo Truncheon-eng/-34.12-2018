@@ -1,11 +1,11 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../doctest/doctest.h"
-#include "support_functions.h"
 #include "MainFrame.h"
 #include "MockMsgBox.h"
-#include <wx/wx.h>
+#include "support_functions.h"
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
+#include <wx/wx.h>
 
 TEST_CASE("Checking applyConversionTable") {
     REQUIRE(applyConversionTable(1) ==
@@ -141,7 +141,8 @@ TEST_CASE("Checking OnHelpButtonClicked method") {
     input_.close();
     wxString wxInfo(info.c_str(), wxConvUTF8);
     wxString help("Справка", wxConvUTF8);
-    EXPECT_CALL(msg, Show(wxInfo, help, wxOK | wxICON_INFORMATION, &mainframe)).Times(1);
+    EXPECT_CALL(msg, Show(wxInfo, help, wxOK | wxICON_INFORMATION, &mainframe))
+        .Times(1);
     mainframe.OnHelpButtonClicked(evt);
 }
 

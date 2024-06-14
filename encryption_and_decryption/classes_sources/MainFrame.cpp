@@ -4,11 +4,12 @@
 #include <wx/stream.h>
 #include <wx/wx.h>
 
-MainFrame::MainFrame(IMsgBox* msg_box): m_msg_box{msg_box}{}
+MainFrame::MainFrame(IMsgBox *msg_box) : m_msg_box{msg_box} {}
 
-MainFrame::MainFrame(const wxString &title, IMsgBox* msg_box)
+MainFrame::MainFrame(const wxString &title, IMsgBox *msg_box)
     : wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(400, 300),
-              wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)), m_msg_box{msg_box} {
+              wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE_BOX)),
+      m_msg_box{msg_box} {
 
     wxPanel *panel = new wxPanel(this, wxID_ANY);
 
@@ -68,13 +69,13 @@ void MainFrame::OnButtonClicked(wxCommandEvent &evt) {
 
     if (!checked_input_file) {
         m_msg_box->Show(wxT("Вставьте путь к корректному исходному файлу!"),
-                     wxT("Ошибка!"), wxOK | wxICON_ERROR, this);
+                        wxT("Ошибка!"), wxOK | wxICON_ERROR, this);
     } else if (!checked_keyfile_file) {
         m_msg_box->Show(wxT("Вставьте путь к корректному файлу с ключом!"),
-                     wxT("Ошибка!"), wxOK | wxICON_ERROR, this);
+                        wxT("Ошибка!"), wxOK | wxICON_ERROR, this);
     } else if (!checked_output_file) {
         m_msg_box->Show(wxT("Вставьте путь к корректному выходному файлу!"),
-                     wxT("Ошибка!"), wxOK | wxICON_ERROR, this);
+                        wxT("Ошибка!"), wxOK | wxICON_ERROR, this);
     } else {
         std::pair<std::vector<uint64_t>, std::vector<char>> data_vectors =
             get_data(path_to_input_file);
@@ -83,8 +84,8 @@ void MainFrame::OnButtonClicked(wxCommandEvent &evt) {
                                          std::move(data_vectors.first)),
                       data_vectors.second);
         m_msg_box->Show(wxString::Format(wxT("%s прошло успешно!"),
-                                      choice->GetStringSelection()),
-                     wxT("Уведомление"), wxOK | wxICON_INFORMATION, this);
+                                         choice->GetStringSelection()),
+                        wxT("Уведомление"), wxOK | wxICON_INFORMATION, this);
     }
 }
 
@@ -101,13 +102,13 @@ void MainFrame::OnHelpButtonClicked(wxCommandEvent &evt) {
     wxString wxInformation(information.c_str(), wxConvUTF8);
 
     m_msg_box->Show(wxInformation, wxT("Справка"), wxOK | wxICON_INFORMATION,
-                 this);
+                    this);
 }
 
 void MainFrame::OnSourceButtonClicked(wxCommandEvent &evt) {
     wxString url = "https://internet-law.ru/gosts/gost/70509/";
     if (!wxLaunchDefaultBrowser(url)) {
         m_msg_box->Show(wxT("Невозможно открыть браузер!"), wxT("Ошибка!"),
-                     wxOK | wxICON_ERROR, this);
+                        wxOK | wxICON_ERROR, this);
     }
 }

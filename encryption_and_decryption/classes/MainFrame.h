@@ -1,8 +1,8 @@
 #ifndef MAINFRAME_H
 #define MAINFRAME_H
 
-#include <wx/wx.h>
 #include "IMsgBox.h"
+#include <wx/wx.h>
 /**
  * @file MainFrame.h
  * @brief Данный заголовочный файл содержит описание класса главного окна
@@ -19,14 +19,16 @@ class MainFrame : public wxFrame {
      * окна.
      * @param title название, которое будет отображаться в верхней панели GUI
      * приложения.
-     * @param msg_box указатель на экземпляр класса IMsgBox, необходимый для вывода окна-сообщений.
+     * @param msg_box указатель на экземпляр класса IMsgBox, необходимый для
+     * вывода окна-сообщений.
      */
-    MainFrame(const wxString &title, IMsgBox* msg_box);
+    MainFrame(const wxString &title, IMsgBox *msg_box);
     /**
      * @brief Конструктор, необходимый для проведения mock тестов.
-     * @param msg_box указатель на экземпляр класса IMsgBox, необходимый для вывода окна-сообщений.
-     */    
-    MainFrame(IMsgBox* msg_box);
+     * @param msg_box указатель на экземпляр класса IMsgBox, необходимый для
+     * вывода окна-сообщений.
+     */
+    MainFrame(IMsgBox *msg_box);
     /**
      * @brief метод, вызываемый при нажатии на кнопку в правом верхнем углу со
      * знаком "?". Выводит окно сообщения со справкой. 
@@ -37,7 +39,8 @@ class MainFrame : public wxFrame {
     /**
      * @brief метод, вызываемый при нажатии на кнопку "Далее" в GUI приложения.
      * Выводит окно сообщения с предупреждениями, в случае некорректно введённых
-     * данных, и окно с надписью об успешном расшифровании или зашифровании в противном случае.
+     * данных, и окно с надписью об успешном расшифровании или зашифровании в
+     * противном случае.
      * @param evt ссылка на событие, которое произошло с кнопкой button.
      */
     void OnButtonClicked(wxCommandEvent &evt);
@@ -48,6 +51,7 @@ class MainFrame : public wxFrame {
      * @param evt сылка на событие, которое произошло с кнопкой sourceButton.
      */
     void OnSourceButtonClicked(wxCommandEvent &evt);
+
   private:
     /** 
      * @brief Указатель на первую форму, в которую необходимо ввести абсолютный путь к
@@ -72,6 +76,9 @@ class MainFrame : public wxFrame {
      * @brief Указатель на экземпляр класса IMsgBox, содержащего метод Show, необходимый для создания окна-сообщения.
      */
     IMsgBox* m_msg_box;
+    //! Указатель на указатель на экземпляр класса IMsgBox, содержащего метод
+    //! Show, необходимый для создания окна-сообщения.
+    IMsgBox *m_msg_box;
 };
 
 #endif
