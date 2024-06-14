@@ -82,7 +82,7 @@ bool key_is_valid(const std::string &PATH_TO_KEY_FILE);
  *
  * @param PATH путь к зашифровываемому или расшифровываемому файлу.
  *
- * @return true возвращается тогда, когда открыть файл по пути получилось и
+ * @return true тогда, когда открыть файл по пути получилось и
  * считывание возможно, false - в противном случае.
  */
 bool path_to_input_file_is_valid(const std::string &PATH);
@@ -115,7 +115,7 @@ std::vector<uint32_t> key_gen(const std::string &PATH_TO_KEY_FILE,
  *
  * @param PATH_TO_FILE путь к исходному файлу.
  *
- * @return пара векторов типа uint64_t и char.
+ * @return пару векторов типа uint64_t и char.
  */
 std::pair<std::vector<uint64_t>, std::vector<char>>
 get_data(const std::string &PATH_TO_FILE);

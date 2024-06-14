@@ -132,15 +132,14 @@ TEST_CASE("Checking OnHelpButtonClicked method") {
     MainFrame mainframe{&msg};
     wxCommandEvent evt(wxEVT_BUTTON, wxID_ANY);
     std::string filePath = "../helpinfo/helpinfo.txt";
-    std::string information;
+    std::string info;
     std::ifstream input_(filePath);
-
     std::string line;
     while (std::getline(input_, line)) {
-        information += line + "\n";
+        info += line + "\n";
     }
     input_.close();
-    wxString wxInfo(information.c_str(), wxConvUTF8);
+    wxString wxInfo(info.c_str(), wxConvUTF8);
     wxString help("Справка", wxConvUTF8);
     EXPECT_CALL(msg, Show(wxInfo, help, wxOK | wxICON_INFORMATION, &mainframe)).Times(1);
     mainframe.OnHelpButtonClicked(evt);

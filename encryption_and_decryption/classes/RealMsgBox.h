@@ -21,7 +21,8 @@ public:
 	 * @param caption текст, выводящийся в верхней панели окна.
 	 * @param style переменная, задающая внешний вид, значение кнопок окна-сообщения.
 	 * @param parent указатель на родителя окна-сообщения.
-	 * @return тип данных: int, так как wxMessageBox также возвращает значения типа int.
+	 * @return идентификаторы кнопок(например wxYes, wxNo), так как wxMessageBox 
+	 * также их и возвращает.
 	 */
 	int Show(const wxString &message, const wxString &caption, int style, wxWindow *parent) override;
 };
