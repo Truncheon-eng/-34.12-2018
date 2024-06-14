@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['write_5fto_5ffile_0',['write_to_file',['../support__functions_8h.html#a700a073af5afd9fb218df5ce6bd2f5d1',1,'support_functions.h']]]
+  ['realmsgbox_0',['RealMsgBox',['../class_real_msg_box.html',1,'']]],
+  ['realmsgbox_2eh_1',['RealMsgBox.h',['../_real_msg_box_8h.html',1,'']]]
 ];

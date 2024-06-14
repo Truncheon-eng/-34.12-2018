@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mainframe_0',['MainFrame',['../class_main_frame.html',1,'MainFrame'],['../class_main_frame.html#a00c85521dad6b24000967206bcc53688',1,'MainFrame::MainFrame()']]],
-  ['mainframe_2eh_1',['MainFrame.h',['../_main_frame_8h.html',1,'']]]
+  ['key_5fgen_0',['key_gen',['../support__functions_8h.html#a01d1e909f735daf9a70a4ab50acbd78e',1,'support_functions.h']]],
+  ['key_5fis_5fvalid_1',['key_is_valid',['../support__functions_8h.html#a79c8a782d07cabbb7997bbe3824538cd',1,'support_functions.h']]]
 ];

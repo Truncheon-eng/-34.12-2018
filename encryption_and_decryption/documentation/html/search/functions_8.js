@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write_5fto_5ffile_0',['write_to_file',['../support__functions_8h.html#a700a073af5afd9fb218df5ce6bd2f5d1',1,'support_functions.h']]]
+  ['show_0',['Show',['../class_i_msg_box.html#aaa35fe01773be3aaa90df071a5e50ae1',1,'IMsgBox::Show()'],['../class_real_msg_box.html#abd83097eda176a26c9553c8ce37de71f',1,'RealMsgBox::Show()']]]
 ];

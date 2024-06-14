@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainframe_0',['MainFrame',['../class_main_frame.html',1,'']]]
+  ['imsgbox_0',['IMsgBox',['../class_i_msg_box.html',1,'']]]
 ];
