@@ -78,11 +78,6 @@ class MainFrame : public wxFrame {
      * необходимый для создания окна-сообщения.
      */
     IMsgBox *m_msg_box;
-    /**
-     * @brief Указатель на экземпляр класса IMsgBox, содержащего метод
-     * Show, необходимый для создания окна-сообщения.
-     */
-    IMsgBox *m_msg_box;
 };
 
 #endif
